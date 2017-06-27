@@ -21,7 +21,8 @@ You must change the spreadsheet key that is in your API file. The spreadsheet ke
 I understand that all spreadsheets are not made in the same way, so I made it simple so that all of the column numbers just have to be replaced in the 'quickstart.rb' file. If your spreadsheet doesn't follow the temp file that is attached in this README, then you may have to change the numbers. If you also want to change the way that the calculations are done or data is stored, then simply change the if statement in the giant for loop for the respective column.
 
 ```
-// For the spreadsheet in 500 Startups Korea, the 15th column corresponds to the Current Valuation (USD Adjusted). All you should do is replace the 15's with wherever your corresponding information is.
+// For the spreadsheet in 500 Startups Korea, the 15th column corresponds to the Current Valuation (USD Adjusted). 
+All you should do is replace the 15's with wherever your corresponding information is.
 
 if (!(row[15].blank?))
 	asdf = row[15]
