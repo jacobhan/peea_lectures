@@ -2,17 +2,15 @@
 
 Hello, and this is the 500 Startups Financial Data website. I built the structure around it so hopefully it will be relatively straightforward to set up this site. It probably shouldn't take more than a few hours, no less than a day.
 
-At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
-
 ## How It Works
 
-Spreadsheet data is pulled from the Google Sheets/Drive API, and that information is stored in the controllers. This prevents the need for the setup of an actual server. 
+Spreadsheet data is pulled from the **Google Sheets/Drive API**, and that information is stored in the controllers. This prevents the need for the setup of an actual server. 
 
-Dynos are automatically updated (I believe once a day), but to see immediate changes on the website after making changes to the spreadsheet, you must reboot the server. I deployed on Heroku so I use PostGreSQL, but if you're planning on using something else then you can just change it to SQLite3, it doesn't really matter.
+Dynos are automatically updated (I believe once a day), but to see immediate changes on the website after making changes to the spreadsheet, you must reboot the server. I deployed on Heroku so I use PostgreSQL, but if you're planning on using something else then you can just change it to SQLite3, it doesn't really matter.
 
 ## API Reference
 
-I use the Google Sheets/Drive API. Familiarty with this API is not needed as I pretty much did everything already, but for clearer documentation than what's on Google, the documentation I found most helpful is at this Github link.
+I use the Google Sheets/Drive API. Familiarty with this API is not needed as I pretty much did everything already, but for clearer documentation than what's on Google, the documentation I found most helpful is at the Github link below.
 
 * [Google Drive Ruby Library](https://github.com/gimite/google-drive-ruby)
 
@@ -23,6 +21,8 @@ You must change the spreadsheet key that is in your API file. The spreadsheet ke
 I understand that all spreadsheets are not made in the same way, so I made it simple so that all of the column numbers just have to be replaced in the 'quickstart.rb' file. If your spreadsheet doesn't follow the temp file that is attached in this README, then you may have to change the numbers. If you also want to change the way that the calculations are done or data is stored, then simply change the if statement in the giant for loop for the respective column.
 
 ```
+// For the spreadsheet in 500 Startups Korea, the 15th column corresponds to the Current Valuation (USD Adjusted). All you should do is replace the 15's with wherever your corresponding information is.
+
 if (!(row[15].blank?))
 	asdf = row[15]
 	asdf[0] = "0"
